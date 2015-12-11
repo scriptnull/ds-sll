@@ -33,7 +33,7 @@ console.log(node.next);  //null - next pointer
 ```
 
 ### Methods
-- setNext() 
+- setNext(node) 
 - getNext()
 
 ## Linked List
@@ -61,3 +61,8 @@ console.log(ll.head);   // null - head of the linked list
 - getDataAtPosition(position)
 - findPositionByData(data)
 
+## Contributing
+Any kind of contribution is welcomed. If you are adding new features , be sure to write the required tests for it.
+
+## License
+![](https://raw.githubusercontent.com/scriptnull/bagpack/master/GPL.png)
