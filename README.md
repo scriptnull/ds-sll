@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/scriptnull/ds-sll.svg?branch=master)](https://travis-ci.org/scriptnull/ds-sll)
+
 ## Install 
 
 via npm 
@@ -63,6 +65,11 @@ console.log(ll.head);   // null - head of the linked list
 
 ## Contributing
 Any kind of contribution is welcomed. If you are adding new features , be sure to write the required tests for it.
+
+## Tests
+Tests are written with Mocha + inbuilt Node.js assert library.
+Initail commit has about 30+ tests. If you feel ds-sll is going wrong somewhere. You could report it in issues or better submit a pull request by describing the case in a test suite. 
+You can track the build status from [travis-ci](https://travis-ci.org/scriptnull/ds-sll)
 
 ## License
 ![](https://raw.githubusercontent.com/scriptnull/bagpack/master/GPL.png)
