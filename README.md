@@ -12,7 +12,7 @@ git clone https://github.com/scriptnull/ds-sll.git
 ```
 ## Usage 
 ```javascript
-var ds = require('ds-sll');
+var ds = require('ds-sll')
  , LinkedList = ds.LinkedList
  , Node = ds.Node ;
 ```
