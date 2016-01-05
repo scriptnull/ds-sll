@@ -26,6 +26,9 @@
   },
   "homepage": "https://github.com/scriptnull/ds-sll",
   "devDependencies": {
-    "mocha": "2.2.5"
+    "mocha": "2.2.5",
+    "grunt": "~0.4.5",
+    "xunit-file": "0.0.9",
+    "grunt-simple-mocha": "~0.4.1"
   }
 }
