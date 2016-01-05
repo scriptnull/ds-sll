@@ -29,6 +29,7 @@
     "mocha": "2.2.5",
     "grunt": "~0.4.5",
     "xunit-file": "0.0.9",
-    "grunt-simple-mocha": "~0.4.1"
+    "grunt-simple-mocha": "~0.4.1",
+    "istanbul": "~0.4.1"
   }
 }
