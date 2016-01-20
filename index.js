@@ -1,5 +1,5 @@
 module.exports = (function(){
-	
+
 	var Node = function(data){
 		this.data = data ;
 		this.next = null ;
@@ -11,13 +11,13 @@ module.exports = (function(){
 
 	Node.prototype.getNext = function(){
 		return this.next;
-	};	
+	};
 
 	var LinkedList = function(){
 			this.length = 0 ;
 			this.head = null ;
 	};
-	
+
 	LinkedList.prototype.show = function(){
 		var str = [];
 		var temp = this.head ;
@@ -31,7 +31,7 @@ module.exports = (function(){
 		//console.log(result);
 		return result;
 	};
-	
+
 	LinkedList.prototype.showLength = function(){
 		console.log(this.length);
 		return 	this.length;
@@ -48,7 +48,7 @@ module.exports = (function(){
 			this.head.setNext(temp);
 		}
 	};
-	
+
 	LinkedList.prototype.insertAtTail = function(node){
 		this.length++;
 		if(!this.head){
@@ -63,7 +63,7 @@ module.exports = (function(){
 			temp.setNext(node);
 		}
 	};
-	
+
 	LinkedList.prototype.insertAtPosition = function(node , position){
 		if(position <= 1 ){
 			this.insertAtHead(node);
@@ -71,7 +71,7 @@ module.exports = (function(){
 		}
 		if(position > this.length){
 			this.insertAtTail(node);
-			return;		
+			return;
 		}
 		else{
 			var pos = 1 , temp = this.head , prev ;
@@ -88,7 +88,7 @@ module.exports = (function(){
 			}
 		}
 	};
-	
+
 	LinkedList.prototype.deleteAtHead = function(){
 		if(this.head){
 			if(this.head.getNext()){
@@ -97,7 +97,7 @@ module.exports = (function(){
 			}
 		}
 	};
-	
+
 	LinkedList.prototype.deleteAtTail = function(){
 		if(this.head){
 			var temp = this.head , prev ;
@@ -109,8 +109,8 @@ module.exports = (function(){
 			this.length--;
 		}
 	};
-	
-	
+
+
 	LinkedList.prototype.deleteAtPosition = function(position){
 		if(position <= 0 )
 			position = 1 ;
@@ -131,35 +131,37 @@ module.exports = (function(){
 				if(pos === position){
 					prev.setNext(temp.getNext());
 					this.length--;
-					break;					
+					break;
 				}
 			}
 		}
 	};
-	
+
 	LinkedList.prototype.getDataAtPosition = function(position){
 		if(position <= 1 ) {
 			return this.head;
 		}
 		if(position > this.length ) position = this.length;
 		var pos = 2 , temp = this.head ;
-		while(temp = temp.getNext()){
+		temp = temp.getNext();
+		while(true){
 			if(pos === position){
 				return temp.data;
 			}
 			pos++;
-		}  
+			temp = temp.getNext();
+		}
 	};
-	
+
 	LinkedList.prototype.findPositionByData = function(data){
 		var temp = this.head;
 		for(var i = 1 ; i <= this.length ; i++){
 			if(temp.data === data )return i ;
 			temp = temp.getNext();
 		}
-		return -1;		
+		return -1;
 	};
-	
+
 	return {
 		LinkedList : LinkedList ,
 		Node : Node
