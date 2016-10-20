@@ -13,7 +13,8 @@
       pre_ci:
         - mkdir -p shippable/testresults
         - mkdir -p shippable/codecoverage
-      cache: true
+      cache: 
+      advanceReporting: false
       ci:
         - grunt
       
