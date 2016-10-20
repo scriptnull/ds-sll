@@ -13,7 +13,6 @@
       pre_ci:
         - mkdir -p shippable/testresults
         - mkdir -p shippable/codecoverage
-      advanceReporting: false
       ci:
         - grunt
       
