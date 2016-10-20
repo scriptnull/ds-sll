@@ -8,6 +8,10 @@
 # The path for Xunit to output test reports
     env:
       - XUNIT_FILE=shippable/testresults/result.xml
+    
+    build:
+      cache: true
+      advancedReporting: true
 
 # Create directories for test and coverage reports
     before_script:
