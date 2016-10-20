@@ -10,7 +10,7 @@
       - XUNIT_FILE=shippable/testresults/result.xml
     
     build:
-      advancedReporting: true
+      cache: true
 
 # Create directories for test and coverage reports
     before_script:
