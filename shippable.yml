@@ -17,6 +17,7 @@
         - mkdir -p shippable/codecoverage
       ci:
         - grunt
+        - ls shippable/codecoverage
       post_ci:
         - ./node_modules/.bin/istanbul cover grunt -- -u tdd
         - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
