@@ -11,9 +11,10 @@
     
     build:
       advancedReporting: true 
-      ci:
+      pre_ci:
         - mkdir -p shippable/testresults
         - mkdir -p shippable/codecoverage
+      ci:
         - grunt
       
 
