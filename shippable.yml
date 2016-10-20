@@ -10,13 +10,15 @@
       - XUNIT_FILE=shippable/testresults/result.xml
     
     build:
-      cache: true
       advancedReporting: true 
       pre_ci:
         - mkdir -p shippable/testresults
         - mkdir -p shippable/codecoverage
       ci:
         - grunt
+      post_ci:
+        - ./node_modules/.bin/istanbul cover grunt -- -u tdd
+        - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
       
 
 # Running the tests with grunt
