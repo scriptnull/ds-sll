@@ -10,8 +10,8 @@
       - XUNIT_FILE=shippable/testresults/result.xml
     
     build:
+      advancedReporting: true 
       ci:
-        - advancedReporting: true
         - mkdir -p shippable/testresults
         - mkdir -p shippable/codecoverage
         - grunt
