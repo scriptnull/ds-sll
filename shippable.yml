@@ -18,8 +18,8 @@
         - grunt
       post_ci:
         - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-        - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
-        - ls shippable/codecoverage
+       # - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
+       # - ls shippable/codecoverage
         
       
 
