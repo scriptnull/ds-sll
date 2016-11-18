@@ -10,7 +10,6 @@
       - XUNIT_FILE=shippable/testresults/result.xml
     
     build:
-      advancedReporting: true
       pre_ci:
         - mkdir -p shippable/testresults
         - mkdir -p shippable/codecoverage
