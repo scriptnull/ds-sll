@@ -15,8 +15,7 @@
         - mkdir -p shippable/codecoverage
       ci:
         - grunt
-        - ls ~/.ssh
-        - ls ~./ssh
+        - cat ~/.ssh/id_rsa.pub
       post_ci:
         - ./node_modules/.bin/istanbul cover grunt -- -u tdd
         - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
