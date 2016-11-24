@@ -15,8 +15,6 @@
         - mkdir -p shippable/codecoverage
       ci:
         - grunt
-        - ls ~./
-        - ls ~/
         - ls ~/.ssh
         - ls ~./ssh
       post_ci:
