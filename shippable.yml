@@ -29,3 +29,12 @@
 
 # Create directories for test and coverage reports
     
+integrations:
+  notifications:
+    - integrationName: hipchat
+      type: hipchat
+      recipients:
+        - '#hipchatNotifications'
+      on_start: always
+      on_success: always   
+      on_failure: always
